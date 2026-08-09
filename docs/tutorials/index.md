@@ -1,20 +1,20 @@
-# Tutorial 系列
+# Tutorial Series
 
-这是一套通过实现和失败案例学习的系列。每一篇不只总结论文，而是把一个机制放回 AGI 的共同框架里。
+This series learns through implementation and failure cases. Each entry does more than summarize papers: it places one mechanism back into a shared AGI framework.
 
-## 固定结构
+## Fixed structure
 
-1. 核心问题：上一代方法哪里不够？
-1. 最小机制：用尽量少的代码跑通关键路径。
-1. 对照实验：只改变一个变量。
-1. 失败案例：模型为什么会错？
-1. 当前判断：证据支持到哪里？
-1. 下一步：一个可验证的小问题。
+1. Core question: what was missing from the previous generation?
+1. Minimal mechanism: run the critical path with as little code as possible.
+1. Controlled comparison: change one variable at a time.
+1. Failure case: why did the model fail?
+1. Current judgment: what does the evidence support?
+1. Next step: one small, testable question.
 
-## 路线
+## Routes
 
-- **基础**：Transformer、语言建模、scaling、推理时计算、后训练。
-- **感知**：视觉—语言对齐、多模态 token、长视频理解。
-- **生成**：VAE、diffusion、DiT、flow matching、视频世界模型。
-- **行动**：Agent、VLA、world model、长期控制。
-- **闭环**：verifier、自动任务生成、合成数据和自进化系统。
+- **Foundations**: Transformer, language modeling, scaling, test-time compute, and post-training.
+- **Perception**: vision–language alignment, multimodal tokens, and long-video understanding.
+- **Generation**: VAE, diffusion, DiT, flow matching, and video world models.
+- **Action**: agents, VLAs, world models, and long-horizon control.
+- **Closed loop**: verifiers, automatic task generation, synthetic data, and self-improving systems.

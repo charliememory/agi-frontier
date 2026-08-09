@@ -1,27 +1,27 @@
 # Frontier Radar
 
-这里记录正在改变判断的进展，而不是所有新闻。每一项都标注证据等级和下一步验证。
+This page records developments that change a judgment, not every piece of news. Each entry carries an evidence level and a next validation step.
 
-## 当前聚焦
+## Current focus
 
 ### World models
 
-视频生成正在从“看起来合理”走向预测未来状态和构造可交互环境。关键验证不是单帧质量，而是物体持久性、动作条件下的预测、长时程一致性和可用于规划的状态表示。
+Video generation is moving from “looks plausible” toward predicting future states and constructing interactive environments. The key tests are not single-frame quality, but object permanence, action-conditioned prediction, long-horizon consistency, and state representations useful for planning.
 
 ### VLA
 
-VLA 把视觉观察、语言任务和动作序列放进一个闭环。核心瓶颈仍是数据覆盖、跨 embodiment 泛化、失败恢复和安全在线学习。
+VLAs place visual observations, language tasks, and action sequences in one loop. The main bottlenecks remain data coverage, cross-embodiment generalization, failure recovery, and safe online learning.
 
 ### Verifiers
 
-推理时计算和自改进系统的共同地基是可靠的评价器。没有独立 holdout、回滚机制和反 reward-hacking 测试，“自我改进”可能只是自我确认。
+Test-time compute and self-improving systems share the same foundation: reliable evaluators. Without independent holdouts, rollback mechanisms, and anti-reward-hacking tests, “self-improvement” may only be self-confirmation.
 
-## 证据等级
+## Evidence levels
 
-`L0` 发布主张 · `L1` 论文实验 · `L2` 公开代码复现 · `L3` 独立复现 · `L4` 长期部署反馈
+`L0` launch claim · `L1` paper experiment · `L2` public-code reproduction · `L3` independent reproduction · `L4` long-term deployment feedback
 
-目前不把 `L0` 当作能力结论。
+Do not treat `L0` as a capability conclusion.
 
-## 更新节奏
+## Update cadence
 
-每月写一份短 memo：本月哪一条判断改变了、证据是什么、下个月准备验证什么。第一阶段通过 GitHub Watch 跟踪更新；形成稳定节奏后再增加 RSS/Atom feed。
+Write one short memo each month: which judgment changed, what the evidence was, and what to validate next month. Start by using GitHub Watch; add an RSS/Atom feed once the publishing cadence is stable.

@@ -1,31 +1,31 @@
-# AGI 能力地图
+# AGI Capability Map
 
-这张地图不把 AGI 当成单一分数，而把它拆成可以观察、复现和质疑的能力。
+This map does not treat AGI as a single score. It decomposes the problem into capabilities that can be observed, reproduced, and challenged.
 
 ```mermaid
 flowchart LR
-  A[表示\n文本 · 图像 · 视频 · 状态] --> B[预测\ntoken · latent · 轨迹 · 动作]
-  B --> C[反馈\n标签 · 偏好 · verifier · 环境]
-  C --> D[闭环\n任务 · 数据 · 策略 · 系统]
+  A[Represent\ntext · image · video · state] --> B[Predict\ntoken · latent · trajectory · action]
+  B --> C[Get feedback\nlabels · preferences · verifiers · environment]
+  C --> D[Close the loop\ntasks · data · policies · systems]
   D --> A
   B --> E[Agent / VLA]
   E --> C
 ```
 
-## 四个连接问题
+## Four connecting questions
 
-每一个新模型都放回这四个问题中观察：
+Place every new model under the same four questions:
 
-1. **表示**：它把什么压缩成可计算的内部状态？
-1. **预测**：它预测的是下一个符号、完整分布，还是未来轨迹？
-1. **反馈**：它如何知道自己错了？
-1. **闭环**：反馈能否生成下一轮更好的任务、数据或策略？
+1. **Representation**: what does it compress into a computable internal state?
+1. **Prediction**: does it predict the next symbol, a full distribution, or a future trajectory?
+1. **Feedback**: how does it know that it is wrong?
+1. **Closed loop**: can feedback produce better tasks, data, or policies for the next round?
 
-这套语言允许你比较看似不同的工作：LLM 在 token 空间预测，扩散模型在 latent 空间去噪，VLA 在状态—动作空间预测，而自进化系统搜索的是实验和更新规则。
+This vocabulary makes seemingly different work comparable: LLMs predict in token space, diffusion models denoise in latent space, VLAs predict in state–action space, and self-improving systems search over experiments and update rules.
 
-## 阅读路径
+## Reading path
 
-- 想理解基础机制：从 [Transformer 与语言建模](../tutorials/01-transformer.md) 开始。
-- 想看历史因果：阅读[技术时间线](../timeline/index.md)。
-- 想判断最新进展：进入 [Frontier Radar](../radar/index.md)。
-- 想亲自验证：进入 [Experiments](../experiments/index.md)。
+- To understand the core mechanism: start with [Transformer and language modeling](../tutorials/01-transformer.md).
+- To recover historical causes: read the [Technology Timeline](../timeline/index.md).
+- To assess current progress: open the [Frontier Radar](../radar/index.md).
+- To test ideas yourself: open [Experiments](../experiments/index.md).

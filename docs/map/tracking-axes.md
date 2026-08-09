@@ -1,17 +1,17 @@
-# 五个追踪轴
+# Five Tracking Axes
 
-每篇 tutorial、论文卡片和实验结果都尽量回答下面五个问题。
+Every tutorial, paper card, and experiment result should answer these five questions where possible.
 
-| 追踪轴       | 要问的问题                       | 常见证据                            |
-| ------------ | -------------------------------- | ----------------------------------- |
-| 泛化         | 能否处理训练分布之外的新任务？   | held-out tasks、跨域测试、组合泛化  |
-| 长时程       | 能否完成几十步甚至更长的任务？   | task completion、错误恢复、轨迹长度 |
-| Grounding    | 是否理解空间、时间、物理与因果？ | grounding、视频预测、交互环境       |
-| 自主学习     | 能否从失败和环境中进步？         | online learning、合成数据、课程学习 |
-| 可靠性与成本 | 能否验证结果并以合理成本运行？   | verifier、一致性、延迟、显存、价格  |
+| Axis                 | Question                                                   | Typical evidence                                                 |
+| -------------------- | ---------------------------------------------------------- | ---------------------------------------------------------------- |
+| Generalization       | Can it handle new tasks outside the training distribution? | held-out tasks, cross-domain tests, compositional generalization |
+| Long horizon         | Can it complete tasks over dozens of steps or more?        | task completion, recovery from errors, trajectory length         |
+| Grounding            | Does it model space, time, physics, and causality?         | grounding tests, video prediction, interactive environments      |
+| Autonomous learning  | Can it improve from failures and environment feedback?     | online learning, synthetic data, curriculum learning             |
+| Reliability and cost | Can results be verified and run at a reasonable cost?      | verifiers, consistency, latency, memory, price                   |
 
-## 避免单一 benchmark 叙事
+## Avoid a single-benchmark story
 
-Benchmark 分数是证据，不是定义。一个系统可能在静态知识题上变强，却没有获得更好的长期规划；也可能通过更昂贵的推理时搜索提高分数，却没有改变参数或环境适应能力。
+Benchmark scores are evidence, not a definition. A system can improve on static knowledge questions without gaining better long-horizon planning. It can also raise scores through more expensive test-time search without changing its parameters or ability to adapt to an environment.
 
-因此研究账本会把事实、解释和假设分开，并记录置信度如何变化。
+The research ledger therefore separates facts, interpretations, and hypotheses, and records how confidence changes.

@@ -1,31 +1,32 @@
 # AGI Frontier
 
-一个面向研究者与工程师的公开学习与实验项目：从 token prediction 出发，沿着多模态理解、生成模型、世界模型、VLA 与 self-improving agents，建立一张可复现、可更新的 AGI 前沿地图。
+A public learning and experimentation project for researchers and engineers. It starts with token prediction and follows the shared path through multimodal understanding, generative models, world models, VLAs, and self-improving agents.
 
-> 阅读不是终点。每个判断都应该能落到一个实验、一个失败案例，或一个可以被推翻的假设上。
+> Reading is not the finish line. Every judgment should lead to an experiment, a failure case, or a falsifiable hypothesis.
 
-## 本地运行
+## Run locally
 
-需要 Python 3.12+。
+Requires Python 3.12+.
 
 ```bash
 uv sync
 uv run mkdocs serve
 ```
 
-打开 `http://127.0.0.1:8000/agi-frontier/` 预览站点。
+Open `http://127.0.0.1:8000/agi-frontier/` to preview the site.
 
-## 内容约定
+## Content conventions
 
-- `docs/` 是公开内容的唯一事实来源。
-- `experiments/` 保存可复现的小实验、配置和结果摘要。
-- 每篇教程回答：问题、机制、最小实现、对照实验、失败模式、当前判断、下一步。
-- 把事实、解释和假设分开写；不要把论文摘要直接当成自己的结论。
+- `docs/` is the single source of truth for public content.
+- `experiments/` stores reproducible small experiments, configurations, and result summaries.
+- Each tutorial answers: question, mechanism, minimal implementation, controlled comparison, failure modes, current judgment, and next test.
+- Separate facts, interpretations, and hypotheses; do not turn a paper abstract into a personal conclusion.
+- English is the canonical language. Translations, when added, should mirror the English page without changing its scope or evidence level.
 
-## 参与方式
+## Contributing
 
-欢迎通过 Issue 提供论文、反例和复现实验建议。正式内容通过 Pull Request 更新，CI 会检查站点能否构建以及 Markdown 的基本质量。
+Use Issues to suggest papers, counterexamples, and reproduction ideas. Submit substantive changes through pull requests; CI checks the site build and basic Markdown quality.
 
 ## License
 
-内容与代码的许可证会在第一批教程稳定后明确；在此之前请保留原始论文和第三方资源的版权信息。
+Licensing for content and code will be selected once the first tutorial set stabilizes. Until then, preserve the copyright notices for papers and third-party resources.

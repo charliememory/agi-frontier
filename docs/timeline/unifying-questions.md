@@ -1,23 +1,23 @@
-# 统一问题框架
+# Unifying Questions
 
-用下面的模板阅读一个新方法：
+Use this template when reading a new method:
 
-### 1. 预测对象
+### 1. Prediction target
 
-它预测 token、patch、latent、视频帧、未来状态、动作，还是实验结果？
+Does it predict tokens, patches, latents, video frames, future states, actions, or experiment outcomes?
 
-### 2. 条件状态
+### 2. Conditioning state
 
-输入是文本、图像、视频、历史轨迹、工具返回值，还是可交互环境？
+Is the input text, an image, a video, a history of trajectories, tool output, or an interactive environment?
 
-### 3. 反馈来源
+### 3. Feedback source
 
-错误由下一个 token loss、人工偏好、规则 verifier、模拟器，还是现实世界反馈定义？
+Is error defined by next-token loss, human preference, a rule-based verifier, a simulator, or feedback from the real world?
 
-### 4. 改进位置
+### 4. Where improvement happens
 
-能力增长来自参数、数据、提示、推理时搜索，还是外部工具和环境？
+Does capability growth come from parameters, data, prompts, test-time search, or external tools and environments?
 
-### 5. 证据等级
+### 5. Evidence level
 
-把“论文报告”“公开复现”“独立复现”“线上部署”分开记录。
+Record “reported in the paper,” “reproduced with public code,” “independently reproduced,” and “observed in deployment” separately.

@@ -1,27 +1,27 @@
-# 开放问题
+# Open Problems
 
-只保留未来可能亲自验证的问题，不追求收集所有领域的开放问题。
+Keep only questions that could plausibly be tested here; do not try to collect every open problem in the field.
 
-## 1. 视频模型何时成为可交互世界模型？
+## 1. When does a video model become an interactive world model?
 
-需要从生成漂亮视频推进到：动作条件预测、长期状态一致性、可执行规划和明确的失败界限。
+Move beyond attractive video generation toward action-conditioned prediction, long-term state consistency, executable planning, and explicit failure boundaries.
 
-**最小实验**：在一个简化模拟环境中比较像素预测、latent 预测和真实环境状态预测对规划的影响。
+**Minimal experiment**: in a simplified simulator, compare how pixel prediction, latent prediction, and true environment-state prediction affect planning.
 
-## 2. VLA 是否需要显式长期记忆？
+## 2. Do VLAs need explicit long-term memory?
 
-短任务成功不等于能完成跨小时任务。需要区分记忆、状态估计、计划和动作策略各自的贡献。
+Success on short tasks does not imply success on tasks that span hours. Separate the contributions of memory, state estimation, planning, and action policy.
 
-**最小实验**：固定策略，只改变历史窗口、外部记忆和任务分解器。
+**Minimal experiment**: hold the policy fixed while changing only the history window, external memory, and task decomposer.
 
-## 3. Verifier 能否替代大规模人工反馈？
+## 3. Can verifiers replace large-scale human feedback?
 
-在数学、代码和可模拟环境中可以测试；在开放世界和审美任务中则需要研究 verifier 的偏差与不完备性。
+This can be tested in math, code, and simulated environments. Open-world and aesthetic tasks require studying verifier bias and incompleteness.
 
-## 4. 自生成任务如何避免分布坍缩？
+## 4. How can self-generated tasks avoid distribution collapse?
 
-任务生成器需要持续发现模型不会做、但又能被可靠评价的新任务，而不是重复简单变体。
+The task generator must keep finding tasks the model cannot solve but that can still be evaluated reliably, rather than repeating simple variants.
 
-## 5. 自动发现算法如何证明是真进步？
+## 5. How can automated discovery prove that progress is real?
 
-必须保留独立 holdout、预注册指标、可回滚版本和计算预算记录。
+Keep an independent holdout, preregistered metrics, rollback versions, and a compute-budget record.

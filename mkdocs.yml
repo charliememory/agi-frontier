@@ -7,7 +7,7 @@ edit_uri: edit/main/docs/
 
 theme:
   name: material
-  language: zh
+  language: en
   custom_dir: docs/overrides
   logo: assets/mark.svg
   favicon: assets/mark.svg
@@ -27,12 +27,12 @@ theme:
       scheme: frontier-light
       toggle:
         icon: material/weather-sunny
-        name: 切换到深色模式
+        name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: frontier-dark
       toggle:
         icon: material/weather-night
-        name: 切换到浅色模式
+        name: Switch to light mode
 
 extra_css:
   - stylesheets/tokens.css
@@ -86,21 +86,22 @@ extra_javascript:
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 nav:
-  - 首页: index.md
-  - 能力地图:
-      - 总览: map/index.md
-      - 五个追踪轴: map/tracking-axes.md
-  - 技术脉络:
-      - 时间线: timeline/index.md
-      - 统一问题框架: timeline/unifying-questions.md
+  - Home: index.md
+  - Capability Map:
+      - Overview: map/index.md
+      - Five Tracking Axes: map/tracking-axes.md
+  - Technology Path:
+      - Timeline: timeline/index.md
+      - Unifying Questions: timeline/unifying-questions.md
   - Tutorials:
-      - 系列说明: tutorials/index.md
-      - 01 · Transformer 与语言建模: tutorials/01-transformer.md
+      - Series Guide: tutorials/index.md
+      - 01 · Transformer and Language Modeling: tutorials/01-transformer.md
   - Frontier Radar:
-      - 当前雷达: radar/index.md
-      - 研究账本: radar/research-ledger.md
-      - 开放问题: radar/open-problems.md
+      - Current Radar: radar/index.md
+      - Research Ledger: radar/research-ledger.md
+      - Open Problems: radar/open-problems.md
   - Experiments:
-      - 实验总览: experiments/index.md
+      - Experiment Index: experiments/index.md
+  - Maintaining the Site: maintaining.md
 
 copyright: "© 2026 Liqian Ma · Built in public"

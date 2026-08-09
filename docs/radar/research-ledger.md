@@ -1,23 +1,23 @@
-# 研究账本
+# Research Ledger
 
-研究账本记录判断如何变化，而不是记录读过多少论文。
+The research ledger records how judgments change, not how many papers were read.
 
-## 记录模板
+## Entry template
 
 ```markdown
-### YYYY-MM-DD · 主题
+### YYYY-MM-DD · Topic
 
-**主张**：
-**初始判断**：
-**新证据**：
-**证据等级**：L0 / L1 / L2 / L3 / L4
-**判断变化**：
-**置信度**：0–100%
-**下一步实验**：
+**Claim**:
+**Initial judgment**:
+**New evidence**:
+**Evidence level**: L0 / L1 / L2 / L3 / L4
+**Judgment change**:
+**Confidence**: 0–100%
+**Next experiment**:
 ```
 
-## 第一条工作假设
+## First working hypothesis
 
-> AGI 的重要跃迁来自表示、预测、反馈和闭环的联合扩展，而不只是参数规模扩大。
+> Important AGI progress comes from jointly expanding representation, prediction, feedback, and closed loops—not only from increasing parameter count.
 
-这是一条待验证的工作假设，不是站点的最终结论。
+This is a working hypothesis to test, not the site's final conclusion.
