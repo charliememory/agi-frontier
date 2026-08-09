@@ -1,0 +1,103 @@
+site_name: AGI Frontier
+site_url: https://charliememory.github.io/agi-frontier/
+site_description: A reproducible map from token prediction to self-improving agents.
+repo_url: https://github.com/charliememory/agi-frontier
+repo_name: charliememory/agi-frontier
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: zh
+  custom_dir: docs/overrides
+  logo: assets/mark.svg
+  favicon: assets/mark.svg
+  font: false
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - search.highlight
+    - search.share
+    - content.action.edit
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: frontier-light
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: frontier-dark
+      toggle:
+        icon: material/weather-night
+        name: 切换到浅色模式
+
+extra_css:
+  - stylesheets/tokens.css
+  - stylesheets/extra.css
+
+plugins:
+  - search
+  - meta
+  - minify:
+      minify_html: true
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: iso_date
+      timezone: Asia/Shanghai
+  - redirects:
+      redirect_maps: {}
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.details
+  - pymdownx.emoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - 首页: index.md
+  - 能力地图:
+      - 总览: map/index.md
+      - 五个追踪轴: map/tracking-axes.md
+  - 技术脉络:
+      - 时间线: timeline/index.md
+      - 统一问题框架: timeline/unifying-questions.md
+  - Tutorials:
+      - 系列说明: tutorials/index.md
+      - 01 · Transformer 与语言建模: tutorials/01-transformer.md
+  - Frontier Radar:
+      - 当前雷达: radar/index.md
+      - 研究账本: radar/research-ledger.md
+      - 开放问题: radar/open-problems.md
+  - Experiments:
+      - 实验总览: experiments/index.md
+
+copyright: "© 2026 Liqian Ma · Built in public"
+

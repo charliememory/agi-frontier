@@ -1,0 +1,20 @@
+name: Paper or technical report
+description: Suggest a paper that may change the frontier map.
+title: "paper: "
+labels: [reading]
+body:
+  - type: input
+    id: url
+    attributes:
+      label: Primary source
+      description: Link to the paper, technical report, or official code.
+    validations:
+      required: true
+  - type: textarea
+    id: claim
+    attributes:
+      label: Why does it matter?
+      description: State the claimed bottleneck and the evidence you expect to inspect.
+    validations:
+      required: true
+

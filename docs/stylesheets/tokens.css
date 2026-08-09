@@ -1,0 +1,57 @@
+/* Hallmark · genre: atmospheric · macrostructure: Map / Diagram · theme: Frontier Night · enrichment: none · nav: N9 · footer: Ft1 */
+
+:root {
+  --color-ink: oklch(20% 0.025 255);
+  --color-ink-soft: oklch(43% 0.025 255);
+  --color-paper: oklch(97% 0.012 90);
+  --color-paper-muted: oklch(92% 0.018 85);
+  --color-paper-deep: oklch(24% 0.035 255);
+  --color-rule: oklch(77% 0.025 255);
+  --color-accent: oklch(65% 0.12 176);
+  --color-accent-deep: oklch(38% 0.09 176);
+  --color-signal: oklch(72% 0.13 72);
+  --color-focus: oklch(62% 0.15 72);
+  --font-display: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-body: Charter, "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 2rem;
+  --text-display: clamp(3rem, 7vw, 7.5rem);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 140ms;
+  --dur-base: 260ms;
+  --dur-slow: 600ms;
+  --rule-thin: 1px;
+  --radius-sm: 0.2rem;
+  --radius-md: 0.55rem;
+}
+
+[data-md-color-scheme="frontier-dark"] {
+  --color-ink: oklch(91% 0.012 90);
+  --color-ink-soft: oklch(72% 0.025 255);
+  --color-paper: oklch(18% 0.03 255);
+  --color-paper-muted: oklch(24% 0.035 255);
+  --color-paper-deep: oklch(12% 0.025 255);
+  --color-rule: oklch(39% 0.035 255);
+  --color-accent: oklch(74% 0.12 176);
+  --color-accent-deep: oklch(40% 0.09 176);
+  --color-signal: oklch(79% 0.13 72);
+  --color-focus: oklch(83% 0.13 72);
+}
+

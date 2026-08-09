@@ -1,0 +1,20 @@
+name: Open problem
+description: Add a research question worth tracking.
+title: "problem: "
+labels: [open-problem]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What remains unclear or unsolved?
+    validations:
+      required: true
+  - type: textarea
+    id: experiment
+    attributes:
+      label: Smallest useful experiment
+      description: How could this be tested with limited resources?
+    validations:
+      required: true
+
