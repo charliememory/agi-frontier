@@ -11,6 +11,10 @@ body {
   font-family: var(--font-body);
 }
 
+.md-grid {
+  max-width: 88rem;
+}
+
 .md-header,
 .md-tabs {
   background: var(--color-paper-deep);
@@ -35,8 +39,11 @@ body {
 .md-typeset h1,
 .md-typeset h2,
 .md-typeset h3 {
+  min-width: 0;
+  color: var(--color-ink);
   font-weight: 650;
   letter-spacing: -0.035em;
+  overflow-wrap: anywhere;
 }
 
 .md-typeset h1 {
@@ -115,13 +122,24 @@ body {
 
 [data-md-color-scheme="frontier-dark"] .frontier-kicker { color: var(--color-accent); }
 
-.frontier-hero h1 { margin: 0; }
-.frontier-hero p { margin: var(--space-6) 0 0; font-size: 1.2rem; }
+.frontier-hero h1 {
+  max-width: 11ch;
+  margin: 0;
+  font-size: clamp(3rem, 6.2vw, 6.6rem);
+  overflow-wrap: anywhere;
+}
+
+.frontier-hero > div > p:not(.frontier-kicker) {
+  max-width: 58ch;
+  margin: var(--space-6) 0 0;
+  font-size: 1.2rem;
+}
 
 .frontier-brief {
   padding: var(--space-6);
   border-left: 2px solid var(--color-signal);
   background: var(--color-paper-muted);
+  color: var(--color-ink);
   font: var(--text-sm)/1.65 var(--font-display);
 }
 
@@ -134,29 +152,41 @@ body {
 }
 
 .frontier-map {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: var(--space-3);
   margin: var(--space-8) 0 var(--space-12);
 }
 
+.frontier-map > p {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-3);
+  max-width: none;
+  margin: 0;
+}
+
 .frontier-node {
+  display: block;
   min-height: 9rem;
   padding: var(--space-4);
   border: 1px solid var(--color-rule);
   border-top: 3px solid var(--color-accent);
   background: color-mix(in oklch, var(--color-paper-muted) 55%, transparent);
-  transition: transform var(--dur-base) var(--ease-out), border-color var(--dur-base) var(--ease-out);
+  transition: border-color var(--dur-base) var(--ease-out);
 }
 
-.frontier-node:hover { transform: translateY(-3px); border-color: var(--color-accent); }
+.frontier-node:hover { border-color: var(--color-accent); }
+.frontier-node:active { border-color: var(--color-signal); }
 .frontier-node small { display: block; color: var(--color-ink-soft); font: var(--text-xs)/1.2 var(--font-mono); }
 .frontier-node strong { display: block; margin: var(--space-4) 0 var(--space-2); font: 650 1.05rem/1.1 var(--font-display); }
 .frontier-node span { color: var(--color-ink-soft); font: var(--text-sm)/1.45 var(--font-display); }
 
 .frontier-actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin: var(--space-8) 0; }
-.frontier-actions a { display: inline-block; padding: 0.65rem 0.9rem; border: 1px solid var(--color-rule); font: 600 var(--text-sm)/1 var(--font-display); }
-.frontier-actions a:first-child { border-color: var(--color-accent); background: var(--color-accent); color: var(--color-paper-deep); }
+.frontier-actions a { display: inline-block; min-height: 44px; padding: var(--space-3) var(--space-4); border: 1px solid var(--color-rule); font: 600 var(--text-sm)/1 var(--font-display); white-space: nowrap; }
+.frontier-actions a:hover { border-color: var(--color-accent); }
+.frontier-actions a:active { transform: translateY(1px); }
+.frontier-actions a:first-child { border-color: var(--color-accent); background: var(--color-accent); color: var(--color-accent-ink); }
+.frontier-actions a:first-child:hover { background: var(--color-signal); }
+.frontier-actions a[aria-disabled="true"],
+.frontier-node[aria-disabled="true"] { opacity: 0.55; cursor: not-allowed; pointer-events: none; }
 
 .frontier-status { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-3); margin: var(--space-8) 0; }
 .frontier-status > div { padding-top: var(--space-3); border-top: 1px solid var(--color-rule); }
@@ -165,14 +195,14 @@ body {
 
 @media (max-width: 800px) {
   .frontier-hero { grid-template-columns: 1fr; gap: var(--space-8); }
-  .frontier-map { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .frontier-map > p { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .frontier-status { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 480px) {
   .md-content { padding-inline: var(--space-4); }
   .frontier-hero { margin-top: var(--space-4); padding-top: var(--space-8); }
-  .frontier-map { grid-template-columns: 1fr; }
+  .frontier-map > p { grid-template-columns: 1fr; }
   .frontier-actions { display: grid; grid-template-columns: 1fr; }
   .frontier-actions a { text-align: center; }
 }

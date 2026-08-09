@@ -23,3 +23,7 @@ def test_homepage_has_no_placeholder_metrics():
     assert "50,000" not in homepage
     assert "10×" not in homepage
 
+
+def test_homepage_front_matter_stays_intact():
+    homepage = (ROOT / "docs/index.md").read_text()
+    assert homepage.startswith("---\nhide:\n")

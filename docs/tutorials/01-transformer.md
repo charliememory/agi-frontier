@@ -29,7 +29,7 @@ Transformer 的关键贡献不是“更聪明地理解语言”，而是把序�
 - 记录训练 loss、验证 loss、参数量、吞吐和显存。
 - 留出一个从未出现的组合任务，观察“记住”与“泛化”的差别。
 
-实验目录：[001 · tiny transformer](../../experiments/001-tiny-transformer/)。
+实验目录：[001 · tiny transformer](https://github.com/charliememory/agi-frontier/tree/main/experiments/001-tiny-transformer)。
 
 ## 失败模式
 
@@ -44,4 +44,3 @@ Transformer 是通用预测器的强基础设施，但它本身不保证世界 g
 ## 下一步
 
 下一篇将把 scaling law 当成实验问题：在有限预算下，参数、数据和训练 token 应该如何分配？
-

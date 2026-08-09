@@ -1,3 +1,9 @@
+---
+hide:
+  - navigation
+  - toc
+---
+
 <div class="frontier-hero">
   <div>
     <p class="frontier-kicker">AGI Frontier / 研究实验室手册</p>
@@ -50,13 +56,12 @@
 
 ## 如何使用这个站点
 
-如果你是第一次来，从[能力地图](map/)建立总览，再按[技术时间线](timeline/)回看历史因果。Tutorial 不追求覆盖所有论文，而是每次选一个机制，写出最小实现，记录它解决了什么、在哪里失败、下一步如何验证。
+如果你是第一次来，从[能力地图](map/index.md)建立总览，再按[技术时间线](timeline/index.md)回看历史因果。Tutorial 不追求覆盖所有论文，而是每次选一个机制，写出最小实现，记录它解决了什么、在哪里失败、下一步如何验证。
 
-研究者可以直接进入 [Frontier Radar](radar/)，查看当前判断和开放问题；工程师可以从 [Experiments](experiments/) 开始。站点内容以 GitHub 上的 Markdown 为事实来源，更新记录和修正也公开保留。
+研究者可以直接进入 [Frontier Radar](radar/index.md)，查看当前判断和开放问题；工程师可以从 [Experiments](experiments/index.md) 开始。站点内容以 GitHub 上的 Markdown 为事实来源，更新记录和修正也公开保留。
 
-> **订阅更新**：第一阶段提供 RSS/Atom feed。邮件订阅会在有稳定内容节奏后再接入，不把额外运营系统变成学习负担。
+> **订阅更新**：第一阶段使用 GitHub Watch。RSS/Atom 与邮件订阅会在形成稳定内容节奏后再接入，不把额外运营系统变成学习负担。
 
 ## 一句话承诺
 
 不维护“我读过什么”，而维护“我的 AGI 判断发生了什么变化，以及下一步如何验证”。
-
