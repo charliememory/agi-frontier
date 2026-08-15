@@ -30,6 +30,34 @@ The current single-language layout deliberately avoids that migration cost. Revi
 1. Open a pull request and let CI run formatting, tests, links, and the strict site build.
 1. Publish only after the page states its evidence level and next validation step.
 
+## Research protocol
+
+The repository uses a compact reading-and-reproduction protocol. It belongs to maintenance rather
+than the numbered tutorial sequence because it describes how to learn, not a technical mechanism.
+
+### Four passes
+
+1. **Claim:** what changed, against which baseline, data, tools, and compute?
+2. **Mechanism:** what changed in representation, prediction, feedback, or the improvement loop?
+3. **Evidence:** are evaluation data independent, comparisons fair, and evaluators game-resistant?
+4. **Reproduction:** what smallest experiment could change the current judgment?
+
+### Evidence ladder
+
+| Level | Meaning | Permitted conclusion |
+| --- | --- | --- |
+| `L0` | Announcement, demo, or selected examples | Monitor only |
+| `L1` | Paper or technical report experiment | Authors report the result under their setup |
+| `L2` | Public artifacts reproduce the central result | Reproducible in one disclosed setup |
+| `L3` | Independent reproduction or adversarial evaluation | Robust beyond the originating team |
+| `L4` | Long-term uncontrolled use | Operational reliability and limits are observed |
+
+### Tutorial completion contract
+
+Every tutorial should leave behind a mechanism summary, minimal implementation, controlled
+comparison, three concrete failures, fact/interpretation/hypothesis separation, a ledger update,
+and a falsifiable next experiment.
+
 ## Keeping it sustainable
 
 Prefer one strong update per month over a daily news feed. Keep large model weights, datasets, and raw logs outside Git; preserve configurations, metrics, failure examples, and changed judgments in the repository.

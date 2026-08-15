@@ -37,6 +37,8 @@ jobs:
 
       - name: Build site
         run: uv run mkdocs build --strict
+        env:
+          CF_WEB_ANALYTICS_TOKEN: ${{ vars.CF_WEB_ANALYTICS_TOKEN }}
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
@@ -53,4 +55,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-

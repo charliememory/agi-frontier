@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  {{ super() }}
+  {% set analytics_token = config.extra.cloudflare_analytics.token %}
+  {% if analytics_token %}
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token":"{{ analytics_token | e }}"}'
+    ></script>
+  {% endif %}
+{% endblock %}
