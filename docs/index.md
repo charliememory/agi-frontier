@@ -24,7 +24,7 @@ hide:
 ## A map that keeps growing
 
 <div class="frontier-map" markdown>
-  <a class="frontier-node" href="map/">
+  <a class="frontier-node" href="tutorials/#phase-ii-perception">
     <small>01 · REPRESENT</small>
     <strong>Represent the world</strong>
     <span>How text, images, video, states, and actions enter a model.</span>
@@ -39,7 +39,7 @@ hide:
     <strong>Get feedback</strong>
     <span>From labels and preferences to verifiers, rewards, and environment feedback.</span>
   </a>
-  <a class="frontier-node" href="radar/open-problems/">
+  <a class="frontier-node" href="tutorials/#phase-v-improvement">
     <small>04 · EVOLVE</small>
     <strong>Keep improving</strong>
     <span>Automatic improvement of tasks, data, policies, code, and architectures.</span>
@@ -56,9 +56,13 @@ hide:
 
 ## How to use this site
 
-If you are new here, start with the [Capability Map](map/index.md), then use the [Technology Timeline](timeline/index.md) to recover the historical causes. The tutorials do not try to cover every paper. Each one selects a mechanism, builds a minimal implementation, records where it fails, and proposes the next test.
+If you are new here, start with the [tutorials](tutorials/index.md). Use the
+[Technology Path](timeline/index.md) when you want the historical order. The series does not try
+to cover every paper. Each page selects a mechanism, explains it, records where it fails, and
+proposes the next test. A page can ship before its experiment exists.
 
-Researchers can go straight to the [Frontier Radar](radar/index.md) for current judgments and open problems. Engineers can start with the [Experiments](experiments/index.md). GitHub Markdown is the source of truth; revisions and corrections remain public.
+Current judgments live in the [Frontier Radar](radar/index.md). [Experiments](experiments/index.md)
+are optional. GitHub Markdown is the source of truth; revisions and corrections remain public.
 
 > **Updates**: Start with GitHub Watch. RSS/Atom and email subscriptions will come after the publishing cadence is stable, so the learning loop does not become an operations project.
 

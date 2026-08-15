@@ -1,8 +1,8 @@
-# Technology Timeline
+# Technology Path
 
-The timeline answers “what happened”; the capability map answers “why it matters.” Use both so technical history does not become a list of names.
-
-## Five expansions of the prediction target
+A short history of what the field expanded the prediction target to, and which bottleneck each
+expansion left open. The [tutorials](../tutorials/index.md) turn the same sequence into learning
+units; this page is only the overview.
 
 ```text
 token → multimodal latent → future trajectory → action → improvement loop
@@ -17,4 +17,14 @@ token → multimodal latent → future trajectory → action → improvement loo
 | 2022–2026 | agents, world models, VLAs, test-time compute          | Tool use, environment prediction, action execution        | online learning, long-term memory, safety          |
 | Now       | verifiers, synthetic data, automated experiment search | A shift from one-shot training to closed-loop improvement | reward hacking, proving real progress              |
 
-> These branches are not a simple chain of inheritance. Visual representation, generative modeling, and control learning evolved in parallel before converging in world models, agents, and embodied systems.
+These branches are not a simple chain of inheritance. Visual representation, generative modeling,
+and control learning evolved in parallel before converging in world models, agents, and embodied
+systems.
+
+## When reading a new method
+
+1. **Prediction target** — tokens, patches, latents, frames, future states, actions, or experiment outcomes?
+1. **Conditioning state** — text, image, video, trajectory history, tool output, or an environment?
+1. **Feedback source** — next-token loss, preference, a verifier, a simulator, or the real world?
+1. **Where improvement happens** — parameters, data, prompts, test-time search, or external tools?
+1. **Evidence** — reported in a paper, reproduced with public code, independently reproduced, or observed in use?

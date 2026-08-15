@@ -24,13 +24,11 @@ contains the executable work that tests claims made in the docs.
 agi-frontier/
 ├── docs/
 │   ├── index.md                 # Site home and the project's working thesis
-│   ├── map/                     # Capability map and the five AGI tracking axes
-│   ├── timeline/                # Historical technology path and shared questions
-│   ├── tutorials/               # Numbered learning units and the complete roadmap
-│   ├── resources/               # Curated external courses, tutorials, and talks
-│   ├── radar/                   # Current frontier judgments, open problems, and ledger
-│   ├── experiments/             # Experiment conventions and tier definitions
-│   ├── maintaining.md           # Research protocol, evidence ladder, and publishing loop
+│   ├── timeline/                # Technology path: how the prediction target expanded
+│   ├── tutorials/               # Numbered learning units and the phase roadmap
+│   ├── radar/                   # Current judgments and the research ledger
+│   ├── experiments/             # Experiment conventions (optional)
+│   ├── maintaining.md           # Language policy and publishing loop
 │   ├── assets/                  # Site images and logo assets
 │   ├── javascripts/             # Site-level JavaScript
 │   ├── stylesheets/             # Site-level CSS tokens and overrides
@@ -45,11 +43,10 @@ agi-frontier/
 
 ### Where to start
 
-1. Read `docs/tutorials/00-overview.md` for the question and route.
-2. Follow `docs/tutorials/roadmap.md` for prerequisites and phase checkpoints.
-3. Use `docs/resources/index.md` to triangulate each topic against established external material.
-4. Read or write a tutorial in `docs/tutorials/`.
-5. Run the matching experiment in `experiments/` and record the result in the research ledger.
+1. Read `docs/tutorials/index.md` for the question, phases, and current sprint.
+1. Use `docs/timeline/index.md` when you want the historical order.
+1. Read or write a tutorial in `docs/tutorials/`.
+1. Experiments in `experiments/` are optional. Record changed judgments in the research ledger.
 
 `docs/` is the source of truth for conclusions and public explanations. Model weights, datasets,
 large logs, and generated site output stay out of Git; preserve configurations, metrics, failure

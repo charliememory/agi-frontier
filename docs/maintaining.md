@@ -38,19 +38,19 @@ than the numbered tutorial sequence because it describes how to learn, not a tec
 ### Four passes
 
 1. **Claim:** what changed, against which baseline, data, tools, and compute?
-2. **Mechanism:** what changed in representation, prediction, feedback, or the improvement loop?
-3. **Evidence:** are evaluation data independent, comparisons fair, and evaluators game-resistant?
-4. **Reproduction:** what smallest experiment could change the current judgment?
+1. **Mechanism:** what changed in representation, prediction, feedback, or the improvement loop?
+1. **Evidence:** are evaluation data independent, comparisons fair, and evaluators game-resistant?
+1. **Reproduction:** what smallest experiment could change the current judgment?
 
 ### Evidence ladder
 
-| Level | Meaning | Permitted conclusion |
-| --- | --- | --- |
-| `L0` | Announcement, demo, or selected examples | Monitor only |
-| `L1` | Paper or technical report experiment | Authors report the result under their setup |
-| `L2` | Public artifacts reproduce the central result | Reproducible in one disclosed setup |
-| `L3` | Independent reproduction or adversarial evaluation | Robust beyond the originating team |
-| `L4` | Long-term uncontrolled use | Operational reliability and limits are observed |
+| Level | Meaning                                            | Permitted conclusion                            |
+| ----- | -------------------------------------------------- | ----------------------------------------------- |
+| `L0`  | Announcement, demo, or selected examples           | Monitor only                                    |
+| `L1`  | Paper or technical report experiment               | Authors report the result under their setup     |
+| `L2`  | Public artifacts reproduce the central result      | Reproducible in one disclosed setup             |
+| `L3`  | Independent reproduction or adversarial evaluation | Robust beyond the originating team              |
+| `L4`  | Long-term uncontrolled use                         | Operational reliability and limits are observed |
 
 ### Tutorial completion contract
 

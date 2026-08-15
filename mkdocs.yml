@@ -48,7 +48,14 @@ plugins:
       type: iso_date
       timezone: Asia/Shanghai
   - redirects:
-      redirect_maps: {}
+      redirect_maps:
+        map/index.md: tutorials/index.md
+        map/tracking-axes.md: tutorials/index.md
+        timeline/unifying-questions.md: timeline/index.md
+        tutorials/00-overview.md: tutorials/index.md
+        tutorials/roadmap.md: tutorials/index.md
+        resources/index.md: tutorials/index.md
+        radar/open-problems.md: tutorials/index.md
 
 markdown_extensions:
   - admonition
@@ -93,25 +100,14 @@ extra:
 
 nav:
   - Home: index.md
-  - Capability Map:
-      - Overview: map/index.md
-      - Five Tracking Axes: map/tracking-axes.md
-  - Technology Path:
-      - Timeline: timeline/index.md
-      - Unifying Questions: timeline/unifying-questions.md
+  - Technology Path: timeline/index.md
   - Tutorials:
-      - Series Guide: tutorials/index.md
-      - Complete Roadmap: tutorials/roadmap.md
-      - 00 · Orientation: tutorials/00-overview.md
+      - Roadmap: tutorials/index.md
       - 01 · Transformer and Language Modeling: tutorials/01-transformer.md
-  - External Resources:
-      - Resource Library: resources/index.md
   - Frontier Radar:
       - Current Radar: radar/index.md
       - Research Ledger: radar/research-ledger.md
-      - Open Problems: radar/open-problems.md
-  - Experiments:
-      - Experiment Index: experiments/index.md
+  - Experiments: experiments/index.md
   - Maintaining the Site: maintaining.md
 
 copyright: "© 2026 Liqian Ma · Built in public"

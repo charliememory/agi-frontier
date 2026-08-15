@@ -7,15 +7,13 @@ ROOT = Path(__file__).parents[1]
 def test_required_public_sections_exist():
     required = [
         ROOT / "docs/index.md",
-        ROOT / "docs/map/index.md",
         ROOT / "docs/timeline/index.md",
-        ROOT / "docs/tutorials/00-overview.md",
+        ROOT / "docs/tutorials/index.md",
         ROOT / "docs/tutorials/01-transformer.md",
-        ROOT / "docs/tutorials/roadmap.md",
-        ROOT / "docs/resources/index.md",
         ROOT / "docs/radar/index.md",
-        ROOT / "docs/radar/open-problems.md",
+        ROOT / "docs/radar/research-ledger.md",
         ROOT / "docs/experiments/index.md",
+        ROOT / "docs/maintaining.md",
     ]
     missing = [str(path.relative_to(ROOT)) for path in required if not path.exists()]
     assert not missing, f"Missing required pages: {missing}"

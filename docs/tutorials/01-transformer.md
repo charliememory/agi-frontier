@@ -7,9 +7,9 @@ By the end of this tutorial, you should be able to:
 - derive causal self-attention from the next-token objective;
 - trace the shape of every tensor through one decoder block;
 - explain why attention made large-scale training easier without claiming that it solved truth,
-  grounding, or planning;
+    grounding, or planning;
 - distinguish memorization, in-distribution prediction, and compositional generalization with an
-  experiment.
+    experiment.
 
 ## Core question
 
@@ -48,15 +48,15 @@ These two equations are enough to define the first implementation target. Do not
 
 For a batch of token IDs with shape $[B,T]$:
 
-| Operation | Output shape | Purpose |
-| --- | --- | --- |
-| Token embedding + position information | $[B,T,d]$ | Represent symbol identity and order |
-| Linear projections to $Q,K,V$ | $[B,T,h,d_h]$ | Create queries, keys, and values per head |
-| Attention scores $QK^T/\sqrt{d_h}$ | $[B,h,T,T]$ | Compare every query position with every key position |
-| Causal mask + softmax | $[B,h,T,T]$ | Prevent reading future tokens; normalize context weights |
-| Weighted values | $[B,T,d]$ | Aggregate context-dependent information |
-| MLP and residual updates | $[B,T,d]$ | Transform each position while preserving an update path |
-| Vocabulary projection | $[B,T,|V|]$ | Produce next-token logits |
+| Operation                              | Output shape           | Purpose                                                  |
+| -------------------------------------- | ---------------------- | -------------------------------------------------------- |
+| Token embedding + position information | $[B,T,d]$              | Represent symbol identity and order                      |
+| Linear projections to $Q,K,V$          | $[B,T,h,d_h]$          | Create queries, keys, and values per head                |
+| Attention scores $QK^T/\sqrt{d_h}$     | $[B,h,T,T]$            | Compare every query position with every key position     |
+| Causal mask + softmax                  | $[B,h,T,T]$            | Prevent reading future tokens; normalize context weights |
+| Weighted values                        | $[B,T,d]$              | Aggregate context-dependent information                  |
+| MLP and residual updates               | $[B,T,d]$              | Transform each position while preserving an update path  |
+| Vocabulary projection                  | $[B,T,\lvert V\rvert]$ | Produce next-token logits                                |
 
 Multi-head attention does not merely repeat one attention map. Each learned projection can organize
 information differently, although interpreting a head as one stable human-readable function is
@@ -73,7 +73,7 @@ This distinction explains two important facts:
 
 - Transformer **training** parallelizes over sequence positions.
 - Autoregressive **generation** still has a serial dependency, motivating KV caching, speculative
-  decoding, parallel decoding proposals, and alternative generation objectives.
+    decoding, parallel decoding proposals, and alternative generation objectives.
 
 ## What the objective can learn
 
@@ -108,8 +108,8 @@ query alice blue → no
 Create three evaluation sets:
 
 1. **Seen combinations:** examples present in training.
-2. **New samples, familiar combinations:** different sequences from the same distribution.
-3. **Held-out compositions:** familiar primitives combined in ways never shown during training.
+1. **New samples, familiar combinations:** different sequences from the same distribution.
+1. **Held-out compositions:** familiar primitives combined in ways never shown during training.
 
 Run at least two model sizes with the same training examples and optimization budget. Record exact
 match or token accuracy for each split. A larger memorization gap is not evidence of stronger
@@ -120,7 +120,7 @@ generalization.
 - Overfit one batch. Failure usually indicates an implementation or optimization problem.
 - Compare against a unigram or n-gram baseline. The Transformer should earn its complexity.
 - Inspect the causal mask by changing a future token and confirming that earlier logits do not
-  change.
+    change.
 - Shuffle labels. A model that performs above chance may be seeing leakage.
 - Repeat with multiple seeds before interpreting a small difference.
 - Report parameter count, tokens processed, wall-clock time, and peak memory with accuracy.
@@ -142,22 +142,22 @@ Experiment directory: [001 · tiny transformer](https://github.com/charliememory
 - Cost rises quickly with context length: the quadratic complexity of attention remains a basic bottleneck.
 - Language is fluent but facts are wrong: next-token probability is not the same as truth in the world.
 - Held-out primitives work but held-out combinations fail: component knowledge did not become
-  systematic composition.
+    systematic composition.
 - A benchmark improves after adding prompt examples: this may be adaptation through context, not a
-  change in model parameters or durable learning.
+    change in model parameters or durable learning.
 
 ## Anchor sources
 
 Read in this order, with a question for each source:
 
 1. Vaswani et al., [Attention Is All You Need](https://arxiv.org/abs/1706.03762) — which serial
-   bottleneck is removed, and which costs remain?
-2. Elman, [Finding Structure in Time](https://doi.org/10.1207/s15516709cog1402_1) — what could
-   recurrent next-step prediction already learn before Transformers?
-3. Brown et al., [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165) — what
-   changes with scale, and how is in-context learning evaluated?
-4. Hoffmann et al., [Training Compute-Optimal Large Language Models](https://arxiv.org/abs/2203.15556)
-   — why is architecture alone insufficient to explain capability growth?
+    bottleneck is removed, and which costs remain?
+1. Elman, [Finding Structure in Time](https://doi.org/10.1207/s15516709cog1402_1) — what could
+    recurrent next-step prediction already learn before Transformers?
+1. Brown et al., [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165) — what
+    changes with scale, and how is in-context learning evaluated?
+1. Hoffmann et al., [Training Compute-Optimal Large Language Models](https://arxiv.org/abs/2203.15556)
+    — why is architecture alone insufficient to explain capability growth?
 
 The first paper is the mechanism anchor. The others connect that mechanism to its predecessors and
 to the next tutorial on scaling.
