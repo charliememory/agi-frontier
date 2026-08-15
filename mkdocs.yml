@@ -92,12 +92,6 @@ extra_javascript:
   - javascripts/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
-# The production workflow supplies this public beacon token as a repository variable. Keeping the
-# default empty prevents local previews and pull-request builds from being counted.
-extra:
-  cloudflare_analytics:
-    token: !ENV [CF_WEB_ANALYTICS_TOKEN, ""]
-
 nav:
   - Home: index.md
   - Technology Path: timeline/index.md
