@@ -5,11 +5,11 @@ description = "A public, reproducible map of the AGI frontier."
 requires-python = ">=3.12,<3.14"
 dependencies = [
   "mkdocs==1.6.1",
-  "mkdocs-material==9.7.0",
-  "mkdocs-git-revision-date-localized-plugin==1.4.7",
+  "mkdocs-material==9.7.7",
+  "mkdocs-git-revision-date-localized-plugin==1.5.4",
   "mkdocs-minify-plugin==0.8.0",
-  "mkdocs-redirects==1.2.2",
-  "pymdown-extensions==10.16.1",
+  "mkdocs-redirects==1.2.3",
+  "pymdown-extensions==11.0.2",
 ]
 
 [dependency-groups]
@@ -18,9 +18,9 @@ dev = [
   "mdformat-frontmatter==2.1.2",
   "mdformat-gfm==1.0.0",
   "mdformat-mkdocs==5.3.0",
-  "pre-commit==4.3.0",
-  "pytest==8.4.1",
-  "ruff==0.12.7",
+  "pre-commit==4.6.2",
+  "pytest==9.1.1",
+  "ruff==0.16.5",
 ]
 
 [tool.uv]
